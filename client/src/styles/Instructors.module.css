@@ -1,0 +1,140 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #666;
+}
+
+.instructorGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.instructorCard {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.instructorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.instructorAvatar {
+  flex: 0 0 250px;
+}
+
+.instructorAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.instructorInfo {
+  flex: 1;
+  padding: 2rem;
+}
+
+.instructorInfo h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.expertise {
+  color: #0070f3;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.instructorStats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.statLabel {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.viewProfileButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewProfileButton:hover {
+  background-color: #0051a8;
+}
+
+@media (max-width: 768px) {
+  .instructorCard {
+    flex-direction: column;
+  }
+  
+  .instructorAvatar {
+    flex: 0 0 auto;
+    height: 250px;
+  }
+  
+  .instructorStats {
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    flex: 1 0 40%;
+    margin-bottom: 1rem;
+  }
+}

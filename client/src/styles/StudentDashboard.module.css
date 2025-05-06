@@ -1,0 +1,880 @@
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.dashboardHeader {
+  background-color: #1e293b;
+  color: white;
+  padding: 2rem;
+}
+
+.dashboardHeaderContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboardHeaderContent h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.dashboardHeaderContent p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.dashboardContent {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboardSidebar {
+  flex: 1;
+  max-width: 280px;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.userAvatar {
+  width: 50px;
+  height: 50px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.userInfo h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.userInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.dashboardNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.navItem, .activeNavItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navItem {
+  color: #4b5563;
+}
+
+.activeNavItem {
+  background-color: #e0f2fe;
+  color: #0070f3;
+  font-weight: 500;
+}
+
+.navItem:hover {
+  background-color: #f3f4f6;
+}
+
+.helpSection {
+  background-color: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.helpSection h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.supportLink {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: #0070f3;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  text-align: center;
+  width: 100%;
+}
+
+.supportLink:hover {
+  background-color: #f9fafb;
+}
+
+.dashboardMain {
+  flex: 3;
+}
+
+.dashboardMain h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.emptyStateIcon {
+  margin-bottom: 1.5rem;
+  color: #9ca3af;
+}
+
+.emptyState h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.emptyState p {
+  margin: 0 0 1.5rem 0;
+  color: #6b7280;
+  max-width: 400px;
+}
+
+.browseCourseBtn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.browseCourseBtn:hover {
+  background-color: #0051a8;
+}
+
+/* My Courses Tab */
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.courseCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.courseCardHeader {
+  position: relative;
+}
+
+.courseCardHeader img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.courseProgress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #0070f3;
+}
+
+.courseCardBody {
+  padding: 1.5rem;
+}
+
+.courseTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.courseTitle a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.courseTitle a:hover {
+  color: #0070f3;
+}
+
+.instructorName {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.courseStats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.progressStat, .lastAccessedStat {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressValue, .lastAccessedValue {
+  font-weight: bold;
+  color: #111827;
+}
+
+.progressLabel, .lastAccessedLabel {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.nextLesson {
+  margin-bottom: 1.5rem;
+}
+
+.nextLesson h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.nextLessonInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+
+.lessonTitle {
+  font-size: 0.9rem;
+  color: #111827;
+  flex: 1;
+}
+
+.lessonDuration {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.continueBtn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0070f3;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.continueBtn:hover {
+  background-color: #0051a8;
+}
+
+/* Upcoming Classes Tab */
+.classesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.classCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.classInfo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.classDateTime {
+  min-width: 100px;
+  text-align: center;
+}
+
+.classDate {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.classTime {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.classDetails {
+  flex: 1;
+}
+
+.classTitle {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.classInstructor {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.classMeta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.classDuration {
+  color: #6b7280;
+}
+
+.classTimeLeft {
+  color: #0070f3;
+  font-weight: 500;
+}
+
+.classActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.joinClassBtn, .viewCourseBtn {
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.joinClassBtn {
+  background-color: #0070f3;
+  color: white;
+}
+
+.joinClassBtn:hover {
+  background-color: #0051a8;
+}
+
+.viewCourseBtn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.viewCourseBtn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Wishlist Tab */
+.wishlistGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.wishlistCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wishlistCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.wishlistCardHeader {
+  position: relative;
+}
+
+.wishlistCardHeader img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.removeWishlistBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6b7280;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.removeWishlistBtn:hover {
+  background-color: #fff;
+  color: #ef4444;
+}
+
+.wishlistCardBody {
+  padding: 1.5rem;
+}
+
+.courseRating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.ratingValue {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.studentsCount {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.priceSection {
+  margin-bottom: 1.5rem;
+}
+
+.discountPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111827;
+  margin-right: 0.75rem;
+}
+
+.originalPrice {
+  font-size: 1rem;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.wishlistActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.addToCartBtn, .buyNowBtn {
+  flex: 1;
+  padding: 0.6rem 0;
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.addToCartBtn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: none;
+}
+
+.addToCartBtn:hover {
+  background-color: #e5e7eb;
+}
+
+.buyNowBtn {
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+}
+
+.buyNowBtn:hover {
+  background-color: #0051a8;
+}
+
+/* Certificates Tab */
+.certificatesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.certificateCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.certificateIcon {
+  color: #0070f3;
+}
+
+.certificateInfo {
+  flex: 1;
+}
+
+.certificateTitle {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.certificateInstructor, .certificateDate {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.certificateInstructor {
+  margin-bottom: 0.25rem;
+}
+
+.certificateActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.downloadBtn, .shareBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.downloadBtn {
+  background-color: #0070f3;
+  color: white;
+}
+
+.downloadBtn:hover {
+  background-color: #0051a8;
+}
+
+.shareBtn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.shareBtn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Account Settings Tab */
+.accountSettingsTab {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.settingsSection {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.settingsSection h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.formGroup input, .formGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.formGroup input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.saveProfileBtn, .changePasswordBtn {
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.saveProfileBtn:hover, .changePasswordBtn:hover {
+  background-color: #0051a8;
+}
+
+.notificationSettings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.notificationOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notificationInfo h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.notificationInfo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0070f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0070f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.accountActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.downloadDataBtn, .deleteAccountBtn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.downloadDataBtn {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.downloadDataBtn:hover {
+  background-color: #e5e7eb;
+}
+
+.deleteAccountBtn {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.deleteAccountBtn:hover {
+  background-color: #fecaca;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .dashboardContent {
+    flex-direction: column;
+  }
+  
+  .dashboardSidebar {
+    max-width: 100%;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .courseGrid, .wishlistGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .classCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .classActions {
+    width: 100%;
+  }
+  
+  .joinClassBtn, .viewCourseBtn {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .certificateCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certificateActions {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .downloadBtn, .shareBtn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* Add this to the existing CSS file */
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #ef4444;
+  margin-top: auto;
+}
+
+.logoutButton:hover {
+  background-color: #fee2e2;
+}

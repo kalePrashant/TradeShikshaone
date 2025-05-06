@@ -1,0 +1,254 @@
+.certificatePageContainer {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 112, 243, 0.1);
+  border-radius: 50%;
+  border-top-color: #0070f3;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.backButton {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: #0051a8;
+}
+
+.certificatePageHeader {
+  background-color: #1e293b;
+  color: white;
+  padding: 1.5rem 2rem;
+}
+
+.certificatePageHeaderContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.backLink:hover {
+  color: white;
+}
+
+.certificatePageHeaderContent h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.certificatePageContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.certificateInfo {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.certificateInfo h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #111827;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.certificateInfo p {
+  margin: 0 0 1.5rem 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.certificateDetails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detailItem h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.detailItem p {
+  margin: 0;
+  font-weight: 500;
+  color: #111827;
+}
+
+.certificateActions {
+  margin-bottom: 2rem;
+}
+
+.certificateActions h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.linkedinButton, .twitterButton, .facebookButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.linkedinButton {
+  background-color: #0077b5;
+  color: white;
+}
+
+.linkedinButton:hover {
+  background-color: #005e93;
+}
+
+.twitterButton {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.twitterButton:hover {
+  background-color: #0c85d0;
+}
+
+.facebookButton {
+  background-color: #4267b2;
+  color: white;
+}
+
+.facebookButton:hover {
+  background-color: #365899;
+}
+
+.certificateVerify h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.verifyLink {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.verifyLink input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copyButton:hover {
+  background-color: #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .certificatePageHeader {
+    padding: 1rem;
+  }
+  
+  .certificatePageContent {
+    padding: 1rem;
+  }
+  
+  .certificateDetails {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .socialButtons {
+    flex-direction: column;
+  }
+  
+  .verifyLink {
+    flex-direction: column;
+  }
+  
+  .copyButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

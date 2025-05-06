@@ -1,0 +1,645 @@
+.coursePlayerContainer {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 112, 243, 0.1);
+  border-radius: 50%;
+  border-top-color: #0070f3;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.backButton {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: #0051a8;
+}
+
+.courseHeader {
+  background-color: #1e293b;
+  color: white;
+  padding: 1.5rem 2rem;
+}
+
+.courseHeaderContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.backLink:hover {
+  color: white;
+}
+
+.courseHeaderContent h1 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #0070f3;
+  border-radius: 4px;
+}
+
+.progressText {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  min-width: 80px;
+}
+
+.courseContent {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.courseSidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.courseInfo {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.courseInfo h2 {
+  margin: 0;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sectionsList {
+  max-height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+.section {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  margin: 0;
+  padding: 0 1.5rem 0.75rem;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.lessonsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.lessonItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #4b5563;
+  transition: background-color 0.3s;
+}
+
+.lessonItem:hover {
+  background-color: #f3f4f6;
+}
+
+.activeLesson {
+  background-color: #f3f4f6;
+  color: #0070f3;
+}
+
+.completedLesson {
+  color: #10b981;
+}
+
+.lessonStatus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1d5db;
+}
+
+.completedLesson .lessonStatus {
+  color: #10b981;
+}
+
+.lessonStatusCircle {
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.lessonInfo {
+  flex: 1;
+}
+
+.lessonTitle {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.lessonMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.lessonType {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.lessonContainer {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lessonHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lessonHeader h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.lessonTabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabButton {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.tabButton:hover {
+  color: #111827;
+}
+
+.activeTab {
+  color: #0070f3;
+  border-bottom-color: #0070f3;
+}
+
+.lessonContent {
+  padding: 1.5rem;
+}
+
+.videoContainer {
+  margin-bottom: 1.5rem;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-color: #1e293b;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.videoPlaceholder svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.videoPlaceholder p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.videoControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.controlsLeft, .controlsRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playButton, .speedButton, .fullscreenButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.playButton:hover, .speedButton:hover, .fullscreenButton:hover {
+  color: #111827;
+}
+
+.volumeControl {
+  color: #4b5563;
+}
+
+.timeDisplay {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.speedButton {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.completeButton {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.completeButton:hover {
+  background-color: #0051a8;
+}
+
+/* Quiz Styles */
+.quiz {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quizProgress {
+  margin-bottom: 1.5rem;
+}
+
+.quizProgress span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.quizProgressBar {
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.quizProgressFill {
+  height: 100%;
+  background-color: #0070f3;
+  border-radius: 4px;
+}
+
+.quizQuestion {
+  margin-bottom: 2rem;
+}
+
+.quizQuestion h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.quizOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quizOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.quizOption:hover {
+  border-color: #0070f3;
+  background-color: #f0f7ff;
+}
+
+.selectedOption {
+  border-color: #0070f3;
+  background-color: #f0f7ff;
+}
+
+.optionSelector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  color: #0070f3;
+}
+
+.selectedOption .optionSelector {
+  border-color: #0070f3;
+  background-color: #0070f3;
+  color: white;
+}
+
+.optionCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+}
+
+.quizNavigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.quizPrevButton, .quizNextButton, .quizSubmitButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quizPrevButton {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: none;
+}
+
+.quizPrevButton:hover {
+  background-color: #e5e7eb;
+}
+
+.quizPrevButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quizNextButton, .quizSubmitButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+}
+
+.quizNextButton:hover, .quizSubmitButton:hover {
+  background-color: #0051a8;
+}
+
+/* Notes Tab */
+.notesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notesTextarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.notesTextarea:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.saveNotesButton {
+  align-self: flex-end;
+  padding: 0.75rem 1.5rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.saveNotesButton:hover {
+  background-color: #0051a8;
+}
+
+/* Discussion Tab */
+.discussionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.discussionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discussionHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.newQuestionButton {
+  padding: 0.6rem 1rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newQuestionButton:hover {
+  background-color: #0051a8;
+}
+
+.emptyDiscussion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  text-align: center;
+  color: #6b7280;
+}
+
+.emptyDiscussion svg {
+  margin-bottom: 1rem;
+  color: #d1d5db;
+}
+
+.emptyDiscussion h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.emptyDiscussion p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .courseContent {
+    flex-direction: column;
+  }
+  
+  .courseSidebar {
+    width: 100%;
+  }
+  
+  .sectionsList {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .courseHeader {
+    padding: 1rem;
+  }
+  
+  .courseContent {
+    padding: 1rem;
+  }
+  
+  .lessonTabs {
+    overflow-x: auto;
+  }
+  
+  .tabButton {
+    padding: 1rem;
+    white-space: nowrap;
+  }
+  
+  .videoControls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .controlsLeft, .controlsRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

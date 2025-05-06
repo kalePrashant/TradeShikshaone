@@ -1,0 +1,261 @@
+.quiz {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quizProgress {
+  margin-bottom: 1.5rem;
+}
+
+.quizProgress span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.quizProgressBar {
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.quizProgressFill {
+  height: 100%;
+  background-color: #0070f3;
+  border-radius: 4px;
+}
+
+.quizQuestion {
+  margin-bottom: 2rem;
+}
+
+.quizQuestion h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.quizOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quizOption {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.quizOption:hover {
+  border-color: #0070f3;
+  background-color: #f0f7ff;
+}
+
+.selectedOption {
+  border-color: #0070f3;
+  background-color: #f0f7ff;
+}
+
+.optionSelector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  color: #0070f3;
+}
+
+.selectedOption .optionSelector {
+  border-color: #0070f3;
+  background-color: #0070f3;
+  color: white;
+}
+
+.optionCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+}
+
+.quizNavigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.quizPrevButton, .quizNextButton, .quizSubmitButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quizPrevButton {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: none;
+}
+
+.quizPrevButton:hover {
+  background-color: #e5e7eb;
+}
+
+.quizPrevButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quizNextButton, .quizSubmitButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+}
+
+.quizNextButton:hover, .quizSubmitButton:hover {
+  background-color: #0051a8;
+}
+
+/* Quiz Results */
+.quizResults {
+  padding: 1.5rem;
+}
+
+.scoreCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.scoreHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.scoreHeader h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.scoreCircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f7ff;
+  border: 3px solid #0070f3;
+}
+
+.scoreValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.scoreMessage {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.scoreMessage h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.scoreMessage p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.resultsSummary {
+  margin-bottom: 1.5rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summaryItem:last-child {
+  border-bottom: none;
+}
+
+.summaryItem span:first-child {
+  color: #6b7280;
+}
+
+.summaryItem span:last-child {
+  font-weight: 500;
+  color: #111827;
+}
+
+.resultsActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.retryButton, .reviewButton {
+  flex: 1;
+  padding: 0.75rem 0;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  border: none;
+}
+
+.retryButton {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.retryButton:hover {
+  background-color: #e5e7eb;
+}
+
+.reviewButton {
+  background-color: #0070f3;
+  color: white;
+}
+
+.reviewButton:hover {
+  background-color: #0051a8;
+}
+
+@media (max-width: 768px) {
+  .scoreHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .resultsActions {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,638 @@
+.container {
+  padding: 0;
+}
+
+.courseHeader {
+  background-color: #1e293b;
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.courseHeaderContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.courseTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.courseSubtitle {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 800px;
+}
+
+.courseStats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.rating {
+  color: #fbbf24;
+}
+
+.instructorPreview {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.instructorPreview img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.instructorPreview a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.instructorPreview a:hover {
+  text-decoration: underline;
+}
+
+.courseContent {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.mainContent {
+  flex: 3;
+}
+
+.contentTabs {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.contentTabs button {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.activeTab {
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.activeTab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0070f3;
+}
+
+.overviewTab, .curriculumTab, .instructorTab, .reviewsTab {
+  margin-bottom: 3rem;
+}
+
+.courseDescription h2, .learningPoints h2, .requirements h2, .targetAudience h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.courseDescription p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.learningPoints, .requirements, .targetAudience {
+  margin-top: 2.5rem;
+}
+
+.learningPoints ul, .requirements ul, .targetAudience ul {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.learningPoints li, .requirements li, .targetAudience li {
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.curriculumHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.curriculumHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.curriculumStats {
+  display: flex;
+  gap: 1rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.curriculumSections {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.curriculumSection {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.curriculumSection:last-child {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionTitle h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.sectionIcon {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.sectionInfo {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.sectionLessons {
+  border-top: 1px solid #e5e7eb;
+}
+
+.lesson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lesson:last-child {
+  border-bottom: none;
+}
+
+.lessonInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lessonIcon {
+  color: #6b7280;
+}
+
+.lessonTitle {
+  font-size: 0.95rem;
+}
+
+.lessonMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.previewBadge {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.lessonDuration {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.instructorProfile {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.instructorAvatar {
+  flex-shrink: 0;
+}
+
+.instructorAvatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.instructorInfo {
+  flex: 1;
+}
+
+.instructorInfo h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.instructorExpertise {
+  color: #6b7280;
+  margin: 0 0 1rem 0;
+}
+
+.instructorStats {
+  display: flex;
+  gap: 2rem;
+}
+
+.instructorStat {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.instructorBio {
+  margin-bottom: 2rem;
+}
+
+.instructorBio h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.instructorBio p {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.viewProfileButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #f3f4f6;
+  color: #111827;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.viewProfileButton:hover {
+  background-color: #e5e7eb;
+}
+
+.reviewsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.reviewsHeader h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.overallRating {
+  display: flex;
+  align-items: center;
+}
+
+.ratingNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ratingNumber span:first-child {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0070f3;
+  line-height: 1;
+}
+
+.ratingStars {
+  color: #fbbf24;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.ratingCount {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviewCard {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.reviewerInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reviewerInitial {
+  width: 40px;
+  height: 40px;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.reviewerInfo h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.reviewDate {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.reviewRating {
+  color: #fbbf24;
+  font-size: 1.1rem;
+}
+
+.reviewComment {
+  margin: 0;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.courseCard {
+  flex: 1;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.coursePreview {
+  position: relative;
+}
+
+.coursePreview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.previewButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.previewButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  background-color: white;
+}
+
+.priceSection {
+  margin-bottom: 1.5rem;
+}
+
+.discountPrice {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.originalPrice {
+  font-size: 1.2rem;
+  color: #6b7280;
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+
+.discountPercentage {
+  background-color: #fef2f2;
+  color: #ef4444;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.enrollButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+}
+
+.enrollButton:hover {
+  background-color: #0051a8;
+}
+
+.moneyBackGuarantee {
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.courseIncludes {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.courseIncludes h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.courseIncludes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.courseIncludes li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.shareButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.shareButton, .giftButton, .applyButton {
+  padding: 0.75rem;
+  background-color: #f3f4f6;
+  color: #111827;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shareButton:hover, .giftButton:hover, .applyButton:hover {
+  background-color: #e5e7eb;
+}
+
+.applyButton {
+  grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+  .courseContent {
+    flex-direction: column;
+  }
+  
+  .courseCard {
+    position: static;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .courseHeader {
+    padding: 2rem 1rem;
+  }
+  
+  .courseContent {
+    padding: 1.5rem 1rem;
+  }
+  
+  .courseTitle {
+    font-size: 2rem;
+  }
+  
+  .contentTabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+  }
+  
+  .contentTabs button {
+    padding: 0.75rem 1rem;
+  }
+  
+  .instructorProfile {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .instructorStats {
+    justify-content: center;
+  }
+}
