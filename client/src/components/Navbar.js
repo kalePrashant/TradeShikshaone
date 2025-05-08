@@ -46,7 +46,10 @@ export default function Navbar({ transparent = false }) {
       <div className={styles.navbarContainer}>
         <Link href="/" className={styles.logo}>
           <img src="/logo.svg" alt="TradeShiksha Logo" />
-          <span><span className={styles.tradePart}>Trade</span><span className={styles.shikshaPart}>Shiksha</span></span>
+          <span>
+            <span className={styles.tradePart}>Trade</span>
+            <span className={styles.shikshaPart}>Shiksha</span>
+          </span>
         </Link>
         
         <div className={`${styles.navLinks} ${isMenuOpen ? styles.active : ''}`}>

@@ -11,9 +11,11 @@
 /* Hero Section - Mobirise Style */
 .heroSection {
   display: flex;
+  flex-direction: row; /* Change back to row layout */
   align-items: center;
+  justify-content: space-between;
   min-height: 100vh;
-  padding: 0;
+  padding: 4rem 2rem;
   background: linear-gradient(135deg, rgba(0, 112, 243, 0.9) 0%, rgba(0, 81, 168, 0.9) 100%), url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -23,11 +25,11 @@
 }
 
 .heroContent {
-  flex: 1;
-  max-width: 600px;
-  padding: 6rem 2rem;
+  max-width: 50%;
+  text-align: left;
   z-index: 1;
   animation: slideUp 0.8s ease-out;
+  margin-bottom: 0; /* Remove bottom margin */
 }
 
 .heroTitle {
@@ -35,10 +37,19 @@
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.1;
+  color: #ffffff; /* Bright white text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
 }
-
+.heroTitle1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: #3a46f5; /* Bright white text */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+}
 .highlight {
-  color: #0070f3;
+  color: #e7a526;
   position: relative;
   display: inline-block;
 }
@@ -50,7 +61,7 @@
   left: 0;
   width: 100%;
   height: 8px;
-  background-color: rgba(0, 112, 243, 0.3);
+  background-color: rgba(231, 165, 38, 0.3); /* Matching the highlight color with transparency */
   z-index: -1;
 }
 
@@ -59,6 +70,20 @@
   margin-bottom: 2.5rem;
   line-height: 1.6;
   color: #e2e8f0;
+}
+
+.heroSubtitle2 {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  color: #094ea8;
+}
+
+.heroSubtitle3 {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  color: #7c3aed;
 }
 
 .heroCta {
@@ -70,19 +95,19 @@
 .primaryButton {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #0070f3;
+  background-color: #e7a526; /* Changed from #0070f3 to #e7a526 */
   color: white;
   text-decoration: none;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.3s;
-  box-shadow: 0 10px 15px -3px rgba(0, 112, 243, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(231, 165, 38, 0.3); /* Updated shadow color to match */
 }
 
 .primaryButton:hover {
-  background-color: #0051a8;
+  background-color: #d69621; /* Darker shade for hover state */
   transform: translateY(-3px);
-  box-shadow: 0 15px 20px -3px rgba(0, 112, 243, 0.4);
+  box-shadow: 0 15px 20px -3px rgba(231, 165, 38, 0.4); /* Updated shadow color to match */
 }
 
 .secondaryButton {
@@ -116,13 +141,23 @@
 .statNumber {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #0070f3;
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 
 .statLabel {
   font-size: 1rem;
-  color: #e2e8f0;
+  color: #ffffff; /* Changed from #e2e8f0 to white */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700; /* Added font-weight to make text bold */
+  margin-bottom: 0.5rem;
+}
+
+
+.statLabel {
+  font-size: 1rem;
+  color: #ffffff; /* Changed from #e2e8f0 to white */
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -136,210 +171,74 @@
   animation: fadeIn 1s ease-out 0.3s forwards;
   opacity: 0;
   animation-fill-mode: forwards;
-}
-
-.heroImage img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  transform: perspective(1000px) rotateY(-15deg);
-  transition: transform 0.5s;
-}
-
-.heroImage img:hover {
-  transform: perspective(1000px) rotateY(0deg);
-}
-
-/* Features Section - Mobirise Style */
-.featuresSection {
-  padding: 8rem 2rem;
-  background-color: white;
-}
-
-.sectionHeader {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 5rem auto;
-}
-
-.sectionTitle {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  color: #1a202c;
   position: relative;
-  display: inline-block;
-}
-
-.sectionTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: #0070f3;
-  border-radius: 2px;
-}
-
-.sectionSubtitle {
-  font-size: 1.25rem;
-  color: #4a5568;
-  line-height: 1.8;
-}
-
-.featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.featureCard {
-  background-color: white;
-  border-radius: 12px;
-  padding: 3rem 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s, box-shadow 0.4s;
-  text-align: center;
-}
-
-.featureCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.featureIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 20px;
-  background-color: rgba(0, 112, 243, 0.1);
-  color: #0070f3;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.featureCard h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #1a202c;
-}
-
-.featureCard p {
-  color: #4a5568;
-  line-height: 1.8;
-}
-
-/* Courses Section - Mobirise Style */
-.coursesSection {
-  padding: 8rem 2rem;
-  background-color: #f7fafc;
-  position: relative;
+  height: 400px;
+  max-width: 45%;
   overflow: hidden;
 }
 
-.coursesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  justify-items: center; /* Add this to center items horizontally */
-  align-items: stretch; /* Add this to make all items the same height */
-}
-
-.courseCard {
-  background-color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s, box-shadow 0.4s;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
+.slideshowContainer {
+  width: 100%;
   height: 100%;
-  width: 100%; /* Add this to ensure cards take full width of their grid cell */
-}
-
-.courseCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* CTA Section - Mobirise Style */
-.ctaSection {
-  padding: 8rem 2rem;
-  background: linear-gradient(135deg, #0070f3 0%, #0051a8 100%);
-  color: white;
   position: relative;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 
-.ctaSection::before {
-  content: '';
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.slideImage {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/pattern.svg');
-  background-size: cover;
-  opacity: 0.1;
-  z-index: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: block;
+  transform: none !important; /* Override any transforms */
 }
 
-.ctaContent {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+.slideImage.active {
+  opacity: 1;
+  z-index: 3;
 }
 
-.ctaContent h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
+/* Add responsive image styles */
+@media (max-width: 1200px) {
+  .slideImage {
+    object-position: center; /* Ensure image is centered */
+  }
 }
 
-.ctaContent p {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 3rem;
-  line-height: 1.8;
+@media (max-width: 768px) {
+  .slideImage {
+    border-radius: 8px; /* Slightly smaller border radius on mobile */
+  }
 }
 
-.ctaButtons {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
+@media (max-width: 480px) {
+  .slideImage {
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.2); /* Lighter shadow on small screens */
+  }
 }
 
-.outlineButton {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  transition: all 0.3s;
-}
-
-.outlineButton:hover {
-  background-color: white;
-  color: #0070f3;
-  border-color: white;
+/* Remove these conflicting styles */
+.heroImage img:not(.slideImage) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* Mobile Responsive Adjustments */
@@ -355,6 +254,12 @@
     max-width: 100%;
     margin-bottom: 3rem;
     padding: 0;
+    text-align: center;
+  }
+
+  .heroImage {
+    max-width: 100%;
+    height: auto;
   }
 
   .heroTitle {
@@ -368,21 +273,29 @@
   .heroStats {
     justify-content: center;
   }
-
-  .featuresGrid, 
-  .coursesGrid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem; /* Reduce gap on smaller screens */
-  }
 }
 
 @media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .heroContent {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
   .heroTitle {
     font-size: 2.5rem;
+    line-height: 1.2;
   }
   
   .heroSubtitle {
     font-size: 1.25rem;
+    margin-bottom: 1.5rem;
   }
   
   .sectionTitle {
@@ -392,16 +305,46 @@
   .heroCta {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
   
-  .ctaButtons {
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .secondaryButton {
+    margin-left: 0;
+  }
+  
+  .heroStats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
     flex-direction: column;
-    gap: 1rem;
+    margin-top: 2rem;
   }
   
-  .featuresGrid, 
-  .coursesGrid {
-    grid-template-columns: 1fr;
+  .statItem {
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+  }
+  
+  .slideshowContainer {
+    height: 350px;
+    width: 100%;
+  }
+  
+  .heroImage {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  
+  .heroImage img {
+    max-height: 300px;
   }
 }
 
@@ -411,7 +354,7 @@
   }
   
   .heroSubtitle {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   
   .heroStats {
@@ -420,121 +363,968 @@
     gap: 1.5rem;
   }
   
-  .sectionTitle {
-    font-size: 2rem;
+  .statNumber {
+    font-size: 1.5rem;
   }
   
-  .ctaContent h2 {
-    font-size: 2rem;
+  .statLabel {
+    font-size: 0.8rem;
   }
   
-  .featureCard, 
-  .courseCard {
-    padding: 2rem 1.5rem;
+  .slideshowContainer {
+    height: 200px;
+  }
+  
+  .primaryButton, .secondaryButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .categoryGrid, .featuresGrid, .coursesGrid {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Category Section */
-.categorySection {
-  padding: 8rem 2rem;
+/* Fix for slideshow container responsiveness */
+.slideshowContainer {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  margin: 0 auto 3rem auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  margin-top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .slideshowContainer {
+    max-width: 90%;
+    height: 500px;
+    margin-top: 50px;
+  }
+  
+  .heroImage {
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+/* Add responsive styles for slideshow container */
+@media (max-width: 1200px) {
+  .slideshowContainer {
+    max-width: 800px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slideshowContainer {
+    max-width: 700px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slideshowContainer {
+    max-width: 100%;
+    height: 400px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshowContainer {
+    height: 300px;
+    margin-top: 30px;
+  }
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.slideImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: block;
+  transform: none !important; /* Override any transforms */
+}
+
+.slideImage.active {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Add responsive image styles */
+@media (max-width: 1200px) {
+  .slideImage {
+    object-position: center; /* Ensure image is centered */
+  }
+}
+
+@media (max-width: 768px) {
+  .slideImage {
+    border-radius: 8px; /* Slightly smaller border radius on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .slideImage {
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.2); /* Lighter shadow on small screens */
+  }
+}
+
+/* Remove these conflicting styles */
+.heroImage img:not(.slideImage) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Remove this if it's causing conflicts */
+.heroImage img:hover {
+  transform: none;
+}
+
+.secondaryButton:hover {
   background-color: white;
+  color: #0070f3;
+  transform: translateY(-3px);
+}
+
+.heroContent::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #E53E3E, #38A169);
+  border-radius: 2px;
+}
+
+.slideshowContainer {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  margin: 0 auto 3rem auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  margin-top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .slideshowContainer {
+    max-width: 90%;
+    height: 500px;
+    margin-top: 50px;
+  }
+  
+  .heroImage {
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+/* Add responsive styles for slideshow container */
+@media (max-width: 1200px) {
+  .slideshowContainer {
+    max-width: 800px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slideshowContainer {
+    max-width: 700px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slideshowContainer {
+    max-width: 100%;
+    height: 400px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshowContainer {
+    height: 300px;
+    margin-top: 30px;
+  }
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.slideImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: block;
+  transform: none !important; /* Override any transforms */
+}
+
+.slideImage.active {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Add responsive image styles */
+@media (max-width: 1200px) {
+  .slideImage {
+    object-position: center; /* Ensure image is centered */
+  }
+}
+
+@media (max-width: 768px) {
+  .slideImage {
+    border-radius: 8px; /* Slightly smaller border radius on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .slideImage {
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.2); /* Lighter shadow on small screens */
+  }
+}
+
+/* Remove these conflicting styles */
+.heroImage img:not(.slideImage) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Remove this if it's causing conflicts */
+.heroImage img:hover {
+  transform: none;
+}
+
+/* Feature Section Styling */
+.featuresSection {
+  padding: 6rem 2rem;
+  background-color: #f0f7ff;
+  background: linear-gradient(140deg, rgba(3, 94, 139, .93), rgba(0, 203, 169, .73), rgba(0, 225, 80, .04)), linear-gradient(72deg, transparent, rgba(0, 225, 117, .64));
   position: relative;
 }
 
-.categoryGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+.sectionContainer {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  justify-items: center;
-  align-items: stretch;
 }
 
-.categoryCard {
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featureCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  margin-bottom: 1.5rem;
+  color: #0070f3;
+  background-color: rgba(0, 112, 243, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.featureCard h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.featureCard p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for feature grid */
+@media (max-width: 992px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featureCard {
+    padding: 1.5rem;
+  }
+}
+
+.slideshowContainer {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  margin: 0 auto 3rem auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  margin-top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .slideshowContainer {
+    max-width: 90%;
+    height: 500px;
+    margin-top: 50px;
+  }
+  
+  .heroImage {
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+/* Add responsive styles for slideshow container */
+@media (max-width: 1200px) {
+  .slideshowContainer {
+    max-width: 800px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slideshowContainer {
+    max-width: 700px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slideshowContainer {
+    max-width: 100%;
+    height: 400px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshowContainer {
+    height: 300px;
+    margin-top: 30px;
+  }
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.slideImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: block;
+  transform: none !important; /* Override any transforms */
+}
+
+.slideImage.active {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* Add responsive image styles */
+@media (max-width: 1200px) {
+  .slideImage {
+    object-position: center; /* Ensure image is centered */
+  }
+}
+
+@media (max-width: 768px) {
+  .slideImage {
+    border-radius: 8px; /* Slightly smaller border radius on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .slideImage {
+    box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.2); /* Lighter shadow on small screens */
+  }
+}
+
+/* Remove these conflicting styles */
+.heroImage img:not(.slideImage) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Remove this if it's causing conflicts */
+.heroImage img:hover {
+  transform: none;
+}
+
+/* Popular Courses Section Styling */
+.coursesSection {
+  padding: 6rem 2rem;
+  background-color: #718126; 
+  background: linear-gradient(140deg, rgba(124, 146, 45, 0.1), rgba(133, 145, 64, 0.2)); 
+  position: relative;
+}
+
+.coursesSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgba(240, 247, 255, 0.8) 0%, rgba(240, 247, 255, 0.9) 100%), url('/images/pattern-bg.png');
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.courseCard {
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.4s, box-shadow 0.4s;
-  text-decoration: none;
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100%;
-  position: relative;
 }
 
-.categoryCard:hover {
+.courseCard:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.categoryImage {
-  height: 180px;
-  width: 100%;
+.courseImage {
+  height: 220px;
   position: relative;
   overflow: hidden;
 }
 
-.categoryImage img {
+.courseImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s;
 }
 
-.categoryCard:hover .categoryImage img {
+.courseCard:hover .courseImage img {
   transform: scale(1.05);
 }
 
-.categoryContent {
+.courseContent {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.categoryCard h3 {
+.courseCategory {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(0, 112, 243, 0.1); /* Blue background instead of yellow */
+  color: #0070f3; /* Blue text instead of yellow */
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.courseCard h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
   color: #1a202c;
 }
 
-.categoryCard p {
+.courseCard p {
   color: #4a5568;
   margin-bottom: 1.5rem;
   line-height: 1.6;
   flex-grow: 1;
 }
 
-.categoryCount {
+.courseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.coursePrice {
+  font-weight: 700;
+  color: #0070f3;
+  font-size: 1.25rem;
+}
+
+.courseRating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.courseRating svg {
+  color: #f6ad55;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0070f3; /* Already blue, no change needed */
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: all 0.3s;
+  font-size: 1.25rem;
+}
+
+.viewAllLink:hover {
+  gap: 0.75rem;
+  color: #00b37d;
+}
+
+.viewAllLink svg {
+  transition: transform 0.3s;
+  width: 22px; /* Increased icon size to match larger text */
+  height: 22px; /* Increased icon size to match larger text */
+}
+
+.viewAllLink:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments for courses grid */
+@media (max-width: 992px) {
+  .coursesGrid {
+    gap: 2rem;
+  }
+  
+  .courseImage {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coursesGrid {
+    grid-template-columns: 1fr; /* One column on mobile */
+    gap: 2rem;
+  }
+  
+  .courseImage {
+    height: 220px;
+  }
+  
+  .coursesSection {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courseImage {
+    height: 180px;
+  }
+  
+  .courseCard {
+    padding: 0;
+  }
+  
+  .courseContent {
+    padding: 1.25rem;
+  }
+}
+
+/* Category Section Styling */
+.categorySectionBrowseByCategory {
+  padding: 6rem 2rem;
+  background-color: #f5f0ff; /* Light purple background */
+  background: linear-gradient(140deg, rgba(124, 58, 237, 0.1), rgba(139, 92, 246, 0.2)); 
+  position: relative;
+}
+
+.categorySectionBrowseByCategory::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgba(245, 240, 255, 0.8) 0%, rgba(245, 240, 255, 0.9) 100%), url('/images/pattern-bg.png');
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.sectionHeaderBrowseByCategory {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitleBrowseByCategory {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #7c3aed; /* Purple color for prominence */
+  position: relative;
+  display: inline-block;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}
+
+.sectionSubtitleBrowseByCategory {
+  font-size: 1.25rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.categoryGridBrowseByCategory {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.categoryCardBrowseByCategory {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.categoryCardBrowseByCategory:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.categoryImageBrowseByCategory {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.categoryImageBrowseByCategory img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.categoryCardBrowseByCategory:hover .categoryImageBrowseByCategory img {
+  transform: scale(1.05);
+}
+
+.categoryContentBrowseByCategory {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.categoryCardBrowseByCategory h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1a202c;
+}
+
+.categoryCardBrowseByCategory p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.categoryCountBrowseByCategory {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background-color: rgba(0, 112, 243, 0.1);
-  color: #0070f3;
+  background-color: rgba(124, 58, 237, 0.1);
+  color: #7c3aed;
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 500;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .categoryGrid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
+/* Responsive adjustments for category grid */
+@media (max-width: 992px) {
+  .categoryGridBrowseByCategory {
+    gap: 2rem;
   }
   
-  .categoryImage {
-    height: 160px;
+  .categoryImageBrowseByCategory {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categoryGridBrowseByCategory {
+    grid-template-columns: 1fr; /* One column on mobile */
+    gap: 2rem;
+  }
+  
+  .categoryImageBrowseByCategory {
+    height: 220px;
+  }
+  
+  .categorySectionBrowseByCategory {
+    padding: 4rem 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .categoryGrid {
-    grid-template-columns: 1fr;
+  .categoryImageBrowseByCategory {
+    height: 180px;
+  }
+  
+  .categoryCardBrowseByCategory {
+    padding: 0;
+  }
+  
+  .categoryContentBrowseByCategory {
+    padding: 1.25rem;
+  }
+}
+
+/* Testimonials Section Styling */
+.testimonialsSection {
+  padding: 6rem 2rem;
+  background-color: #fff9c4; /* Light yellow background */
+  background: linear-gradient(140deg, rgba(255, 236, 179, 0.4), rgba(255, 224, 130, 0.5)); 
+  position: relative;
+}
+.testimonialsSection1 {
+  padding: 6rem 2rem;
+  background-color: #0070f3; /* Light yellow background */
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.9) 0%, rgba(0, 81, 168, 0.9) 100%); 
+  position: relative;
+}
+
+.testimonialsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgba(255, 248, 225, 0.8) 0%, rgba(255, 248, 225, 0.9) 100%), url('/images/pattern-bg.png');
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonialCard {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s, box-shadow 0.4s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialContent {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialContent p {
+  color: #4a5568;
+  line-height: 1.8;
+  font-style: italic;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.testimonialContent p::before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(255, 193, 7, 0.2);
+  position: absolute;
+  top: -1.5rem;
+  left: -0.5rem;
+  font-family: serif;
+  z-index: -1;
+}
+
+.testimonialFooter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+}
+
+.testimonialAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 193, 7, 0.2);
+}
+
+.testimonialAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonialInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialInfo h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  color: #1a202c;
+}
+
+.testimonialInfo p {
+  font-size: 0.9rem;
+  color: #718096;
+  margin: 0;
+}
+
+/* Responsive adjustments for testimonials grid */
+@media (max-width: 992px) {
+  .testimonialsGrid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonialsGrid {
+    grid-template-columns: 1fr; /* One column on mobile */
+    gap: 2rem;
+  }
+  
+  .testimonialsSection {
+    padding: 4rem 1.5rem;
+  }
+  
+  .testimonialCard {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonialCard {
+    padding: 1.25rem;
+  }
+  
+  .testimonialContent p {
+    font-size: 1rem;
+  }
+  
+  .testimonialAvatar {
+    width: 50px;
+    height: 50px;
   }
 }

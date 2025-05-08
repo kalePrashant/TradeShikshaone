@@ -3,16 +3,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: rgb(222, 200, 245); /* Keep this green background */
   z-index: 1000;
   transition: all 0.4s ease;
   padding: 1.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Added shadow by default */
 }
 
 .scrolled {
-  background-color: white;
+  /* Remove background-color change, keep only padding change */
+  /* background-color: white; - Remove this line */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
+  padding: 1.5rem 0;  /* Keep the same as .navbar padding */
 }
 
 .navbarContainer {
@@ -32,38 +34,58 @@
 }
 
 .logo img {
-  height: 40px;
+  height: 80px;  /* Increased from 40px */
   width: auto;
 }
 
 .logo span {
-  font-size: 1.5rem;
+  font-size: 2.5rem;  /* Increased from 1.5rem */
   font-weight: 800;
   color: white;
   transition: color 0.3s;
 }
 
+/* Add these new classes for the colored logo text */
+.tradePart {
+  color: #E53E3E !important; /* Red color */
+  font-weight: 800;
+}
+
+.shikshaPart {
+  color: #38A169 !important; /* Green color */
+  font-weight: 700;
+}
+
 .scrolled .logo span {
-  color: #1a202c;
+  /* color: #1a202c; - Remove this line */
+  /* Keep the original color from .logo span */
 }
 
 .navLinks {
   display: flex;
   align-items: center;
   gap: 2rem;
+  color: #0070f3; /* Set the default color to #0070f3 as requested */
+  font-size: 1.1rem; /* Increase font size (adjust as needed) */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .navLinks a {
-  color: white;
+  color: #0070f3;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
   position: relative;
   padding: 0.5rem 0;
+  font-size: 1.5rem;
+
 }
 
 .scrolled .navLinks a {
-  color: #4a5568;
+  /* color: #4a5568; - Remove this line */
+  /* Keep the original white color */
 }
 
 .navLinks a:hover {
@@ -92,9 +114,10 @@
 }
 
 .loginButton {
-  color: white;
+  color: #0070f3;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.5rem;
   transition: color 0.3s;
 }
 
@@ -155,7 +178,8 @@
 }
 
 .scrolled .userButton {
-  color: #4b5563;
+  /* color: #4b5563; - Remove this line */
+  /* Keep the original color */
 }
 
 .userButton:hover {
@@ -285,27 +309,15 @@
   }
 }
 
-.tradePart {
-  color: #E53E3E;
-  font-weight: 800;
-}
-
-.shikshaPart {
-  color: #38A169;
-  font-weight: 700;
-}
-
 .transparent {
-  background-color: transparent !important;
-  box-shadow: none !important;
+  background-color: rgb(40, 228, 140) !important; /* Match the navbar background color */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 .transparent .navLinks a {
-  color: white !important;
+  color: white !important; /* Keep consistent with non-scrolled state */
 }
 
 .transparent .logo span {
-  color: white !important;
+  color: white !important; /* Keep consistent with non-scrolled state */
 }
-
-/* When scrolled, these styles will be overridden by the .scrolled class */
