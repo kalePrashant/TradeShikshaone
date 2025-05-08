@@ -10,7 +10,7 @@ const nextConfig = {
 if (process.env.NODE_ENV === 'production') {
   nextConfig.output = 'export';
   nextConfig.basePath = '/TradeShiksha';
-  nextConfig.assetPrefix = '/TradeShiksha/';
+  nextConfig.assetPrefix = '/TradeShiksha';  // Remove trailing slash
   nextConfig.trailingSlash = true;
 }
 

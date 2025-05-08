@@ -9,7 +9,7 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build && npm run export",
+    "predeploy": "npm run build && npm run export && node -e \"require('fs').writeFileSync('out/.nojekyll', '')\"",    
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
