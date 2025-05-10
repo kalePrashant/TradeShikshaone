@@ -12,13 +12,9 @@ if (process.env.NODE_ENV === 'production') {
   nextConfig.basePath = '/TradeShiksha';
   nextConfig.assetPrefix = '/TradeShiksha';
   nextConfig.trailingSlash = true;
-  // Add this to ensure all assets use the correct path
+  // Remove the nested images property in experimental
   nextConfig.experimental = {
-    ...nextConfig.experimental,
-    images: {
-      ...nextConfig.images,
-      unoptimized: true,
-    },
+    // Any other experimental features can go here
   };
 }
 
