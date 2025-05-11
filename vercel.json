@@ -2,5 +2,8 @@
   "buildCommand": "cd client && npm run build",
   "outputDirectory": "client/.next",
   "devCommand": "cd client && npm run dev",
-  "installCommand": "cd client && npm install"
+  "installCommand": "cd client && npm install --verbose",
+  "env": {
+    "NPM_CONFIG_LOGLEVEL": "verbose"
+  }
 }
